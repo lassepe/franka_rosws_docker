@@ -31,7 +31,7 @@ dev:
 
 build:
 	@docker compose run --rm ros catkin init
-	@docker compose run --rm ros catkin build -DMAKE_BUILD_TYPE=Release -DFranka_DIR:PATH=~/ros_ws/src/libfranka/build --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+	@docker compose run --rm ros catkin build -DMAKE_BUILD_TYPE=Release -DFranka_DIR:PATH=~/libfranka/build --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
 	@docker compose run -w /home/user/ros_ws/build/ --rm ros merge_compile_commands
 
 docker:
