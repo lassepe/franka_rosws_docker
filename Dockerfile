@@ -25,6 +25,16 @@ LABEL maintainer="Ignacio Vizzo <ignaciovizzo@gmail.com>"
 # Add any additional dependencies here:
 RUN apt-get update && apt-get install --no-install-recommends -y \
     rsync \
+    ros-noetic-realsense2-camera \
+    build-essential \
+    cmake \
+    git \
+    libpoco-dev \
+    libeigen3-dev \
+    libfmt-dev \
+    ros-noetic-combined-robot-hw \
+    ros-noetic-boost-sml \
+    ros-noetic-pinocchio \
     && rm -rf /var/lib/apt/lists/*
 
 # $USER_NAME Inherited from .base/Dockerfile

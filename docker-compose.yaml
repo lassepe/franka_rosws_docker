@@ -27,6 +27,11 @@ services:
     network_mode: "host"
     environment:
       - DISPLAY=$DISPLAY
+      - ROS_MASTER_URI=$ROS_MASTER_URI
+      - ROS_IP=$ROS_IP
+      - ROS_HOSTNAME=$ROS_HOSTNAME
+    # devices:
+    #   - /dev/bus/usb/002/002:/dev/bus/usb/002/002
     volumes:
       - .:/home/user/ros_ws
       - ${ROS_BAGS:-/dev/tmp}:/home/user/ros_ws/bags/:ro
