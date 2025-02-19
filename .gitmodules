@@ -1,0 +1,27 @@
+[submodule "src/apriltag"]
+	path = src/apriltag
+	url = git@github.com:AprilRobotics/apriltag
+[submodule "src/apriltag_ros"]
+	path = src/apriltag_ros
+	url = git@github.com:AprilRobotics/apriltag_ros
+[submodule "src/easy_handeye"]
+	path = src/easy_handeye
+	url = git@github.com:IFL-CAMP/easy_handeye.git
+[submodule "src/franka_easy_handeye"]
+	path = src/franka_easy_handeye
+	url = git@github.com:franzesegiovanni/franka_easy_handeye.git
+[submodule "src/libfranka"]
+	path = src/libfranka
+	url = git@github.com:frankaemika/libfranka.git
+[submodule "src/panda-ros-py"]
+	path = src/panda-ros-py
+	url = git@github.com:platonics-delft/panda-ros-py
+[submodule "src/realsense-ros"]
+	path = src/realsense-ros
+	url = git@github.com:IntelRealSense/realsense-ros.git
+[submodule "src/franka_ros"]
+	path = src/franka_ros
+	url = git@github.com:lassepe/franka_ros.git
+[submodule "src/franka_human_friendly_controllers"]
+	path = src/franka_human_friendly_controllers
+	url = git@github.com:lassepe/franka_human_friendly_controllers.git
