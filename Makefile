@@ -23,18 +23,14 @@
 CONTAINER_NAME?=noetic
 export CONTAINER_NAME
 
-default:build
-	@docker compose run --rm ros tmuxinator
+make default: run
 
-dev:
-	@docker compose run --rm ros tmuxinator
-
-build:
+build_workspace:
 	@docker compose run --rm ros catkin init
-	@docker compose run --rm ros catkin build -DMAKE_BUILD_TYPE=Release -DFranka_DIR:PATH=~/libfranka/build --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+	@docker compose run --rm ros catkin build -DMAKE_BUILD_TYPE=Release --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
 	@docker compose run -w /home/user/ros_ws/build/ --rm ros merge_compile_commands
 
-docker:
+build_docker_image:
 	docker build -t ros_in_docker/noetic:$(CONTAINER_NAME) .
 
 clean:

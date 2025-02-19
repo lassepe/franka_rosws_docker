@@ -45,6 +45,7 @@ RUN mkdir -p /home/$USER_NAME/libfranka/build
 WORKDIR /home/$USER_NAME/libfranka/build
 RUN cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=/opt/openrobots/lib/cmake -DBUILD_TESTS=OFF ..
 RUN make -j$(nproc)
+ENV Franka_DIR=/home/$USER_NAME/libfranka/build
 
 # $USER_NAME Inherited from .base/Dockerfile
 WORKDIR /home/$USER_NAME/ros_ws
